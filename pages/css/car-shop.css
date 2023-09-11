@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  margin: 0px;
+}
+header img {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  margin: auto;
+  margin-left: 20px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(2 ,100px) auto; 
+  background-image: linear-gradient( 178.4deg,  rgba(77,88,105,1) 4.8%, rgba(39,43,57,1) 86.7% );
+  margin: 0px;
+  border-bottom: 4px solid #CAE9FF;
+  box-shadow: 4px 0 3px #415a77;
+
+}
+
+header h1 {
+  margin: auto;
+  margin-left: 10px;
+  color: #d5e8ef;
+  font-size: 30px;
+}
+
+header nav ul {
+  display: inline-block;
+}
+
+header nav ul li {
+  list-style: none;
+  grid-column: span3;
+  display: inline-block;
+  padding: 7px;
+  margin-left: 40px;
+}
+
+header nav ul li a {
+  color: #d5e8ef;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+footer {
+  color: white;
+  height: 200px;
+  width: 100%;
+  text-align: center;
+  display: grid;
+  background-image: linear-gradient( 178.4deg,  rgb(53, 58, 67) 4.8%, rgb(0, 0, 0) 86.7% );
+  margin-top: 40px;
+  border-top: 4px solid black;
+}
+
+footer div a img {
+  height: 45px;
+  width: 45px;
+  transition-duration: .2s;
+  transition-delay: 50ms;
+}
+
+footer div {
+  margin-top: -40px;
+}
+
+footer div a {
+  margin-top: -50px;
+}
+
+footer div a:not(:first-child) {
+  padding-left: 50px;
+}
+
+footer div a img:hover {
+  height: 50px;
+  width: 50px;
+}
+
+main,
+.head,
+.head-des {
+  color: #d5e8ef;
+}
+
+main {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  justify-content: space-evenly;
+  align-content: space-between;
+  height: 1300px;
+}
+
+main .car{
+  background-image: linear-gradient( 178.4deg,  rgba(77,88,105,1) 4.8%, rgba(39,43,57,1) 86.7% );
+  height: 400px;
+  width: 350px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px black;
+}
+
+.head,
+.head-des {
+  text-align: center;
+  text-shadow: 3px 4px 4px black;
+}
+
+main .car img {
+  height: 200px;
+  width: 350px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: 0px 4px 5px black;
+}
+
+main .car p {
+  margin: 0 10px;
+  color: white;
+}
+

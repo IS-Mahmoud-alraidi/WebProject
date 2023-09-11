@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style-about.css">
+  <link rel="icon" href="../imgs/bmw.ico">
+  <title>About Us</title>
+</head>
+<body>
+  <header>
+    <img class="icon" src="../imgs/bmw.ico" alt="BMW Logo">
+    <h1>BMW</h1>
+    <nav>
+      <ul>
+        <li class="li1"><a href="../index.html">Home Page</a></li>
+        <li class="li2"><a href="comments.html">Comments</a></li>
+        <li class="li3"><a href="car-shop.html">Car Shop</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h1>About Us</h1>
+    <p>
+      BMW is a German luxury automobile manufacturer that was founded in 1916. 
+      BMW is known for producing high-performance vehicles that offer a balance of luxury,
+      style, and technology. They offer a range of vehicles including sedans, coupes, convertibles, 
+      SUVs, and sports cars.
+    </p>
+    <p>
+      One of the most popular BMW models is the BMW 3 Series, which is a compact executive
+      car that has been in production since 1975. The 3 Series is known for its sporty handling,
+      luxurious interior, and advanced technology features. It is available in a variety of
+      configurations, including sedan, wagon, and Gran Turismo.
+    </p>
+  </section>
+  <button class="show">Show Form</button>
+  <br><br>
+  <form action="">
+    <fieldset class="sign-in">
+      <label for="name">User Name: </label>
+      <input type="text" id="name" name="name" autofocus required>
+      <br><br>
+      <label for="mail">E-mail: </label>
+      <input type="email" name="email" id="mail" required>
+      <br><br>
+      <label for="pass">Password: </label>
+      <input type="password" name="password" id="pass" minlength="8" maxlength="15" required>
+    </fieldset>
+    <br><br>
+    <fieldset>
+      <label for="car-chose">Choose a car: </label>
+      <select name="car" id="car-chose">
+        <optgroup label="BMW M">
+          <option value="m1">M1</option>
+          <option value="m2">M2</option>
+          <option value="m3">M3</option>
+          <option value="m4" selected>M4</option>
+          <option value="m5">M5</option>
+          <option value="m6">M6</option>
+          <option value="m7">M7</option>
+          <option value="m8">M8</option>
+        </optgroup>
+        <optgroup label="BMW X">
+          <option value="x1">X1</option>
+          <option value="x2">X2</option>
+          <option value="x3">X3</option>
+          <option value="x4">X4</option>
+          <option value="x5">X5</option>
+          <option value="x6">X6</option>
+          <option value="x7">X7</option>
+        </optgroup>
+        <optgroup label="BMW I">
+          <option value="i1">I1</option>
+          <option value="i2">I2</option>
+          <option value="i3">I3</option>
+        </optgroup>
+      </select>
+    </fieldset>
+    <br><br>
+    <fieldset>
+      <label for="coun">Country: </label>
+      <input type="text" name="Country" id="coun" required>
+      <br><br>
+      <label for="card">Credit Card: </label>
+      <input type="text" name="credit" id="card" required size="20" maxlength="20" minlength="20">
+      <br><br>
+      <input type="reset" value="Reset">
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+  <footer>
+    <h3>Follow us on social media:</h3>
+    <div class="social">
+      <a href="https://www.facebook.com/"><img src="../imgs/facebook (1).png" alt="Facebook"></a>
+      <a href="https://www.instagram.com"><img src="../imgs/instagram (1).png" alt="Instagrm"></a>
+      <a href="https://twitter.com"><img src="../imgs/twitter (1).png" alt="Twitter"></a>
+      <a href="https://web.telegram.org"><img src="../imgs/telegram (1).png" alt="Telegram"></a>
+    </div>
+  </footer>
+</body>
+</html>
