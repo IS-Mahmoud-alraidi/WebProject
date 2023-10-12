@@ -3,92 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <link rel="stylesheet" href="css/style-about.css">
   <link rel="icon" href="../imgs/bmw.ico">
+  <script type="text/javascript" src="JS/AboutUs.js"></script>
   <title>About Us</title>
+  <script>
+    function showForm(formName) {
+      var signupForm = document.getElementById('signupForm');
+      var signinForm = document.getElementById('signinForm');
+      var cardj = document.getElementById('cardj');
+
+      if (formName === 'signup') {
+        signupForm.style.display = 'block';  
+        signinForm.style.display = 'none';
+        cardj.style.transform = 'rotateY(180deg)';
+      } else if (formName === 'signin') {
+        signinForm.style.display = 'block'; 
+        signupForm.style.display = 'none';
+        cardj.style.transform = 'rotateY(180deg)';
+      }
+    }
+
+    function BackToAboutUs() {
+      var cardj = document.getElementById('cardj');
+      cardj.style.transform = 'rotateY(0deg)';
+    }
+  </script>
 </head>
 <body>
   <header>
-    <img class="icon" src="../imgs/bmw.ico" alt="BMW Logo">
-    <h1>BMW</h1>
-    <nav>
-      <ul>
-        <li class="li1"><a href="../index.html">Home Page</a></li>
-        <li class="li2"><a href="comments.html">Comments</a></li>
-        <li class="li3"><a href="car-shop.html">Car Shop</a></li>
-      </ul>
-    </nav>
+    <div>
+      <img class="icon" src="../imgs/bmw.ico" alt="BMW Logo">
+      <h1>BMW COMPANY</h1>
+      <nav>
+        <span class="navshort">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <ul>
+          <li class="li1"><a href="../index.html">Home Page</a></li>
+          <li class="li2"><a href="comments.html">Comments</a></li>
+          <li class="li3"><a href="car-shop.html">Car Shop</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <section>
-    <h1>About Us</h1>
-    <p>
-      BMW is a German luxury automobile manufacturer that was founded in 1916. 
-      BMW is known for producing high-performance vehicles that offer a balance of luxury,
-      style, and technology. They offer a range of vehicles including sedans, coupes, convertibles, 
-      SUVs, and sports cars.
-    </p>
-    <p>
-      One of the most popular BMW models is the BMW 3 Series, which is a compact executive
-      car that has been in production since 1975. The 3 Series is known for its sporty handling,
-      luxurious interior, and advanced technology features. It is available in a variety of
-      configurations, including sedan, wagon, and Gran Turismo.
-    </p>
-  </section>
-  <button class="show">Show Form</button>
-  <br><br>
-  <form action="">
-    <fieldset class="sign-in">
-      <label for="name">User Name: </label>
-      <input type="text" id="name" name="name" autofocus required>
-      <br><br>
-      <label for="mail">E-mail: </label>
-      <input type="email" name="email" id="mail" required>
-      <br><br>
-      <label for="pass">Password: </label>
-      <input type="password" name="password" id="pass" minlength="8" maxlength="15" required>
-    </fieldset>
-    <br><br>
-    <fieldset>
-      <label for="car-chose">Choose a car: </label>
-      <select name="car" id="car-chose">
-        <optgroup label="BMW M">
-          <option value="m1">M1</option>
-          <option value="m2">M2</option>
-          <option value="m3">M3</option>
-          <option value="m4" selected>M4</option>
-          <option value="m5">M5</option>
-          <option value="m6">M6</option>
-          <option value="m7">M7</option>
-          <option value="m8">M8</option>
-        </optgroup>
-        <optgroup label="BMW X">
-          <option value="x1">X1</option>
-          <option value="x2">X2</option>
-          <option value="x3">X3</option>
-          <option value="x4">X4</option>
-          <option value="x5">X5</option>
-          <option value="x6">X6</option>
-          <option value="x7">X7</option>
-        </optgroup>
-        <optgroup label="BMW I">
-          <option value="i1">I1</option>
-          <option value="i2">I2</option>
-          <option value="i3">I3</option>
-        </optgroup>
-      </select>
-    </fieldset>
-    <br><br>
-    <fieldset>
-      <label for="coun">Country: </label>
-      <input type="text" name="Country" id="coun" required>
-      <br><br>
-      <label for="card">Credit Card: </label>
-      <input type="text" name="credit" id="card" required size="20" maxlength="20" minlength="20">
-      <br><br>
-      <input type="reset" value="Reset">
-      <input type="submit" value="Submit">
-    </fieldset>
-  </form>
+  <main>
+    <div class="card" id="cardj">
+      <section class="Acontainer">
+        <h2>About Us</h2>
+        <p class="p1">
+          BMW is a German luxury automobile manufacturer that was founded in 1916. 
+          BMW is known for producing high-performance vehicles that offer a balance of luxury,
+          style, and technology. They offer a range of vehicles including sedans, coupes, convertibles, 
+          SUVs, and sports cars.
+        </p>
+        <p class="p2">
+          One of the most popular BMW models is the BMW 3 Series, which is a compact executive
+          car that has been in production since 1975. The 3 Series is known for its sporty handling,
+          luxurious interior, and advanced technology features. It is available in a variety of
+          configurations, including sedan, wagon, and Gran Turismo.
+        </p>
+        <div class="btn-container">
+          <a href="#" class="btn" onclick="showForm('signup')">Sign Up</a>
+          <a href="#" class="btn" onclick="showForm('signin')">Sign In</a>
+        </div>
+      </section>
+      <div class="form-container" id="signupForm">
+        <h2>Sing Up</h2>
+        <form>
+          <input type="text" placeholder="First Name" autofocus name="FirstName">
+          <input type="text" placeholder="Last Name" name="LastName">
+          <input type="email" placeholder="Email" required name="Email">
+          <input type="password" placeholder="Password" autocomplete="off" required name="Password">
+          <input type="password" placeholder="Confirm Password" autocomplete="off" required name="ConfirmedPassword">
+          <button type="submit" onclick="alert('Thanks for the communication')" name="signUp">Sign Up</button>
+          <button type="button" onclick="BackToAboutUs()">Back</button>
+        </form>
+      </div>
+      <div class="form-container  form2" id="signinForm">
+        <h2>Sing In</h2>
+        <form>
+          <input type="email" placeholder="Email" required name="Email">
+          <input type="password" placeholder="Password" autocomplete="off" required name="Password">
+          <button type="submit" onclick="alert('Thanks for the communication')" name="signIn">Sign In</button>
+          <button type="button" onclick="BackToAboutUs()">Back</button>
+        </form>
+      </div> 
+    </div>    
+  </main>
   <footer>
     <h3>Follow us on social media:</h3>
     <div class="social">
@@ -97,6 +102,7 @@
       <a href="https://twitter.com"><img src="../imgs/twitter (1).png" alt="Twitter"></a>
       <a href="https://web.telegram.org"><img src="../imgs/telegram (1).png" alt="Telegram"></a>
     </div>
+    <h4><span>&copy;</span> 2023 All Right Reserved</h4>
   </footer>
 </body>
 </html>
