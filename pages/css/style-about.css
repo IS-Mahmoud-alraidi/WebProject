@@ -133,7 +133,7 @@ main {
   position: relative;
   width: 100%;
   max-width: 700px;
-  height: 450px;
+  height: 75vh;
   margin: auto;
   top: 35px;
 }
@@ -162,7 +162,7 @@ main {
 .form-container {
   position: absolute;
   width: 100%;
-  height: 400px;
+  height: 410px;
   background: linear-gradient(178.4deg, rgb(53, 58, 67) 4.8%, rgb(0, 0, 0) 86.7%);
   border-radius: 4px;
   padding: 15px;
@@ -201,8 +201,8 @@ p {
 }
 
 .btn:hover,
-form button[type="submit"]:hover,
-form button[type="button"]:hover {
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
   background-color: #4c83c2;
 }
 
@@ -213,7 +213,7 @@ form button[type="button"]:hover {
 form input[type="text"] {
   width: 40%;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-radius: 4px;
   border: none;
   background-color: black;
@@ -221,14 +221,31 @@ form input[type="text"] {
 }
 
 form input[type="email"],
-form input[type="password"] {
+form input[type="password"],
+form input[type="date"] {
   width: 80%;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-radius: 4px;
   border: none;
   background-color: black;
   color: white;
+}
+
+form p {
+  font-size: 12px;
+}
+
+form p input[type="button"] {
+  border: none;
+  background-color: transparent;
+  color: #3c97ff;;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+form p input[type="button"]:hover {
+  color: rgb(136, 178, 255);
 }
 
 form input[type="email"]::placeholder,
@@ -237,8 +254,8 @@ form input[type="text"]::placeholder {
   color: #9ab3c5;
 }
 
-form button[type="submit"],
-form button[type="button"] {
+form input[type="submit"],
+form input[type="reset"] {
   display: inline-block;
   width: 40%;
   padding: 10px;
@@ -327,7 +344,7 @@ footer h4 span {
   main {
     top: 50px;
     max-width: 390px;
-    height: 465px;
+    height: 700px;
   }
 
   .Acontainer {
@@ -336,7 +353,7 @@ footer h4 span {
 
   .form-container {
     padding: 0px 10px;
-    height: 370px;
+    height: 385px;
   }
 
   .Acontainer .p2 {
@@ -406,37 +423,26 @@ footer h4 span {
   }
 
   main {
-    top: 18px;
-    max-width: 359px;
-    height: 451px;
-    padding: 20px;
+    top: 50px;
+    max-width: 360px;
+    height: 70vh;
   }
-  
-  .card {
-    height: auto;
-  }
-  
+
   .Acontainer {
-    height: 380px;
-    padding: 10px;
-    width: 320px;
+    height: 370px;
   }
 
   .form-container {
-    height: 380px;
     padding: 0px 10px;
-    width: 320px;
+    height: 385px;
+  }
+
+  .Acontainer .p2 {
+    display: none;
   }
 
   .form2 {
-    padding: 80px 10px;
-  } 
-  
-  form input[type="text"],
-  form input[type="email"],
-  form input[type="password"] {
-    width: 100%;
-    margin-bottom: 15px;
+    padding: 60px 10px;
   }
 
   footer div a img {
@@ -450,5 +456,45 @@ footer h4 span {
 
   footer h4 span {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  main {
+    top: 50px;
+    max-width: 300px;
+    height: 450px;
+  }
+
+  .Acontainer {
+    height: 380px;
+  }
+
+  .form-container {
+    height: 400px;
+  }
+
+  main .Acontainer h2 {
+    margin: 5px 0px;
+  }
+
+  .form1 {
+    padding: 15px 0px;
+  }
+}
+
+@media (max-width: 280px) {
+  main {
+    top: 50px;
+    max-width: 250px;
+    height: 460px;
+  }
+
+  .Acontainer {
+    height: 425px;
+  }
+
+  .btn {
+    margin-right: 5px;
   }
 }

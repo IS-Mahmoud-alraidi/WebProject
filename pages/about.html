@@ -1,108 +1,120 @@
+<!--
+  This page has information about the company in a small paragraph and two buttons 
+  one if you have already account and the aother for new users if you click sing in 
+  a form apear with to input form (email and password) and submit button to send info 
+  and reset button and a button that lets you go back to the about us paragraph 
+  ... if you do not have an account choose sing up to create a new one that you will 
+  fill the requested fields
+-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <link rel="stylesheet" href="css/style-about.css">
-  <link rel="icon" href="../imgs/bmw.ico">
-  <script type="text/javascript" src="JS/AboutUs.js"></script>
-  <title>About Us</title>
-  <script>
-    function showForm(formName) {
-      var signupForm = document.getElementById('signupForm');
-      var signinForm = document.getElementById('signinForm');
-      var cardj = document.getElementById('cardj');
-
-      if (formName === 'signup') {
-        signupForm.style.display = 'block';  
-        signinForm.style.display = 'none';
-        cardj.style.transform = 'rotateY(180deg)';
-      } else if (formName === 'signin') {
-        signinForm.style.display = 'block'; 
-        signupForm.style.display = 'none';
-        cardj.style.transform = 'rotateY(180deg)';
-      }
-    }
-
-    function BackToAboutUs() {
-      var cardj = document.getElementById('cardj');
-      cardj.style.transform = 'rotateY(0deg)';
-    }
-  </script>
-</head>
-<body>
-  <header>
-    <div>
-      <img class="icon" src="../imgs/bmw.ico" alt="BMW Logo">
-      <h1>BMW COMPANY</h1>
-      <nav>
-        <span class="navshort">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-        <ul>
-          <li class="li1"><a href="../index.html">Home Page</a></li>
-          <li class="li2"><a href="comments.html">Comments</a></li>
-          <li class="li3"><a href="car-shop.html">Car Shop</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <div class="card" id="cardj">
-      <section class="Acontainer">
-        <h2>About Us</h2>
-        <p class="p1">
-          BMW is a German luxury automobile manufacturer that was founded in 1916. 
-          BMW is known for producing high-performance vehicles that offer a balance of luxury,
-          style, and technology. They offer a range of vehicles including sedans, coupes, convertibles, 
-          SUVs, and sports cars.
-        </p>
-        <p class="p2">
-          One of the most popular BMW models is the BMW 3 Series, which is a compact executive
-          car that has been in production since 1975. The 3 Series is known for its sporty handling,
-          luxurious interior, and advanced technology features. It is available in a variety of
-          configurations, including sedan, wagon, and Gran Turismo.
-        </p>
-        <div class="btn-container">
-          <a href="#" class="btn" onclick="showForm('signup')">Sign Up</a>
-          <a href="#" class="btn" onclick="showForm('signin')">Sign In</a>
-        </div>
-      </section>
-      <div class="form-container" id="signupForm">
-        <h2>Sing Up</h2>
-        <form>
-          <input type="text" placeholder="First Name" autofocus name="FirstName">
-          <input type="text" placeholder="Last Name" name="LastName">
-          <input type="email" placeholder="Email" required name="Email">
-          <input type="password" placeholder="Password" autocomplete="off" required name="Password">
-          <input type="password" placeholder="Confirm Password" autocomplete="off" required name="ConfirmedPassword">
-          <button type="submit" onclick="alert('Thanks for the communication')" name="signUp">Sign Up</button>
-          <button type="button" onclick="BackToAboutUs()">Back</button>
-        </form>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style-about.css">
+    <link rel="icon" href="../imgs/bmw.ico">
+    <title>About Us</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img class="icon" src="../imgs/bmw.ico" alt="BMW Logo">
+        <h1>BMW COMPANY</h1>
+        <nav>
+          <span class="navshort">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <ul>
+            <li class="li1"><a href="../index.html" title="Go to home page">Home Page</a></li>
+            <li class="li2"><a href="comments.html" title="Go to comments">Comments</a></li>
+            <li class="li3"><a href="car-shop.html" title="Go to car shop">Car Shop</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="form-container  form2" id="signinForm">
-        <h2>Sing In</h2>
-        <form>
-          <input type="email" placeholder="Email" required name="Email">
-          <input type="password" placeholder="Password" autocomplete="off" required name="Password">
-          <button type="submit" onclick="alert('Thanks for the communication')" name="signIn">Sign In</button>
-          <button type="button" onclick="BackToAboutUs()">Back</button>
-        </form>
-      </div> 
-    </div>    
-  </main>
-  <footer>
-    <h3>Follow us on social media:</h3>
-    <div class="social">
-      <a href="https://www.facebook.com/"><img src="../imgs/facebook (1).png" alt="Facebook"></a>
-      <a href="https://www.instagram.com"><img src="../imgs/instagram (1).png" alt="Instagrm"></a>
-      <a href="https://twitter.com"><img src="../imgs/twitter (1).png" alt="Twitter"></a>
-      <a href="https://web.telegram.org"><img src="../imgs/telegram (1).png" alt="Telegram"></a>
-    </div>
-    <h4><span>&copy;</span> 2023 All Right Reserved</h4>
-  </footer>
-</body>
+    </header>
+    <main>
+      <div class="card" id="cardj">
+        <section class="Acontainer">
+          <h2>About Us</h2>
+          <p class="p1">
+            BMW is a German luxury automobile manufacturer that was founded in 1916. 
+            BMW is known for producing high-performance vehicles that offer a balance of luxury,
+            style, and technology. They offer a range of vehicles including sedans, coupes, convertibles, 
+            SUVs, and sports cars.
+          </p>
+          <p class="p2">
+            One of the most popular BMW models is the BMW 3 Series, which is a compact executive
+            car that has been in production since 1975. The 3 Series is known for its sporty handling,
+            luxurious interior, and advanced technology features. It is available in a variety of
+            configurations, including sedan, wagon, and Gran Turismo.
+          </p>
+          <div class="btn-container">
+            <a href="#" class="btn" onclick="showForm('signup')">Sign Up</a>
+            <a href="#" class="btn" onclick="showForm('signin')">Sign In</a>
+          </div>
+        </section>
+        <div class="form-container form1" id="signupForm">
+          <h2>Sing Up</h2>
+          <form>
+            <input type="text" placeholder="First Name" autofocus name="FirstName">
+            <input type="text" placeholder="Last Name" name="LastName">
+            <input type="date" name="Age">
+            <input type="email" placeholder="Email" required name="Email">
+            <input type="password" placeholder="Password" autocomplete="off" required name="Password" minlength="8" maxlength="20">
+            <input type="password" placeholder="Confirm Password" autocomplete="off" required name="ConfirmedPassword" minlength="8" maxlength="20">
+            <input type="submit" onclick="alert('Thanks for signing up')" name="signUp" value="Sign up">
+            <input type="reset" value="Reset">
+            <p>Have an account?<input type="button" onclick="BackToAboutUs()" value="Back"></p>
+          </form>
+        </div>
+        <div class="form-container  form2" id="signinForm">
+          <h2>Sing In</h2>
+          <form>
+            <input type="email" placeholder="Email" required name="Email">
+            <input type="password" placeholder="Password" autocomplete="off" required name="Password" minlength="8" maxlength="20">
+            <input type="submit" onclick="alert('Thanks for signing in')" name="signIn" value="Sign in">
+            <input type="reset" value="Reset">
+            <p>Have no account?<input type="button" onclick="BackToAboutUs()" value="Back"></p>
+          </form>
+        </div> 
+      </div>    
+    </main>
+    <footer>
+      <h3>Follow us on social media:</h3>
+      <div class="social">
+        <a href="https://www.facebook.com/" title="Facebook"><img src="../imgs/facebook(1).png" alt="Facebook"></a>
+        <a href="https://www.instagram.com" title="Instagrm"><img src="../imgs/instagram(1).png" alt="Instagrm"></a>
+        <a href="https://twitter.com" title="Twitter"><img src="../imgs/twitter(1).png" alt="Twitter"></a>
+        <a href="https://web.telegram.org" title="Telegram"><img src="../imgs/telegram(1).png" alt="Telegram"></a>
+      </div>
+      <h4><span>&copy;</span> 2023 All Right Reserved</h4>
+    </footer>
+    <script>
+      function showForm(formName) {
+        var signupForm = document.getElementById('signupForm');
+        var signinForm = document.getElementById('signinForm');
+        var cardj = document.getElementById('cardj');
+
+        if (formName === 'signup') {
+          signupForm.style.display = 'block';  
+          signinForm.style.display = 'none';
+          cardj.style.transform = 'rotateY(180deg)';
+        } 
+        
+        else if (formName === 'signin') {
+          signinForm.style.display = 'block'; 
+          signupForm.style.display = 'none';
+          cardj.style.transform = 'rotateY(180deg)';
+        }
+      }
+
+      function BackToAboutUs() {
+        var cardj = document.getElementById('cardj');
+        cardj.style.transform = 'rotateY(0deg)';
+      }
+    </script>
+  </body>
 </html>

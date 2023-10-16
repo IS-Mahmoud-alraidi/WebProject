@@ -326,3 +326,19 @@ footer h4 span {
     font-size: 16px;
   }
 }
+
+@media (max-width: 300px) {
+  main .car {
+    width: 240px;
+    overflow: hidden;
+  }
+
+  main .car img {
+    width: 240px;
+    height: 150px;
+  }
+
+  .head-des {
+    font-size: 15px;
+  }
+}

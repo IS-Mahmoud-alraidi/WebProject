@@ -92,6 +92,7 @@
 	text-decoration: none; 
 	outline: none; 
 	border: none; 
+	visibility: hidden;
 }
 
 #wowslider-container0  .ws_bullets { 
